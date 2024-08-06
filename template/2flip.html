@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flipkart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial;
+            box-sizing: border-box;
+        }
+        
+        body{
+            background-color: whitesmoke;
+        }
+        
+        header{
+            position: sticky;
+            top: 0px;
+            z-index: 50;
+        }
+        
+        .navbar{
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Change this from space-evenly to space-between */
+            padding: 10px 20px; /* Add padding for better spacing */
+        }
+        
+        .navlogo{
+            height: 98px;
+            width: 200px;
+        }
+        
+        .logo{
+            height: 98px;
+            width: 200px;
+            background-image: url(static/images/flipkart.jpg);
+            background-size: cover;
+        }
+        
+        
+        .nav-search{     
+            margin-left: -1px; /* Increase left margin for better spacing */
+            border: 1px solid black;
+            border-radius: 20px; /* Add some border-radius for rounded corners */
+            overflow: hidden; /* Hide overflow for rounded corners */
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35%;
+        }
+        
+        .search-input{
+            width: 100%; /* Use 100% width for better responsiveness */
+            padding: 5px 10px; /* Add padding for better input appearance */
+            border: none;
+            outline: none;
+            background: transparent; /* Make background transparent */
+        }
+        
+        .search-icon{
+            display: flex;
+            height: 38px;
+            width: 38px;
+            justify-content: center;
+            align-items: center;
+            background: #337ab7; /* Add background color for search icon */
+            border-radius: 0 20px 20px 0; /* Add border-radius for rounded corners */
+        }
+        
+         .seclogo {
+            margin-left: 1%; /* Increase right margin for better spacing */
+            font-size: 25px;
+            margin-top: -1px;
+        } 
+        
+        .user-logo:hover{
+            position: relative; 
+            background-color: blue; 
+            justify-content: center;
+            align-items: center;
+        } 
+        
+        #login{
+            display: inline-block;
+            font-size: 1.5rem;
+           
+        }
+        
+        .nav-cart a{
+            font-size: 25px;
+            margin-top: 3px;
+            text-decoration: none;
+            color: black;
+        }
+        
+        .nav-seller{
+            font-size: 25px;
+            margin-right: 5%;
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+        .contact a{
+            font-size: 25px;
+            text-decoration: none;
+            color: black;
+            margin-top: 35px;
+            margin-left: -40px;
+        }
+        
+        
+        
+    </style>
+    <header>
+        <div class="navbar">
+            <div class="navlogo border">
+                <div class="logo"></div>
+            </div>
+                    <div class="nav-search">
+                        <div class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        <input placeholder="SEARCH FOR PRODUCT" class="search-input">
+                    </div>
+    
+                    <div class="seclogo">
+                        <div class="user-logo">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <a href="login">Login</a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="cart">Cart</a>
+                    </div>
+                    <div class="nav-seller">
+                    <p><span>Become a seller</span></p>
+                    </div> 
+                    <div class="contact">
+                        <a href="contact" >Contact Us</a>
+                    </div>
+        </div>
+    </header>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+{% block body %}{% endblock body%}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

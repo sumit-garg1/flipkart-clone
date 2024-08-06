@@ -1,0 +1,331 @@
+{% extends "2flip.html" %}
+{% block body %} 
+<style>
+  .sec-navbar{
+      margin-top: 10px;
+      margin-right: 15px;
+      margin-left: 35px;
+      height: 100px;
+      width: 95%; /* Change vw100 to 100vw for correct width */
+      display: flex;
+      justify-content: space-around;
+      background-color: white;
+      
+  }
+  
+  .box1{
+      background-image: url(/static/images/grocery.webp)
+  }
+  .box2{
+      background-image: url(/static/images/mobile.webp)
+
+  }
+  .box3{
+      background-image: url(/static/images/dress.webp)
+  }
+  .box4{
+      background-image: url(/static/images/furniture.webp)
+
+  }
+  .box5{
+      background-image: url(/static/images/electronics.webp)
+
+  }
+  .box1, .box2, .box3, .box4, .box5{
+      height: 80px;
+      width: 5%;
+      margin-left: 5rem;
+      margin-top: 8px;
+      background-size: contain;
+      background-repeat: no-repeat;
+  }
+  
+  .text{
+      font-size: 15px;
+      margin-top: 4rem; 
+      margin-left: 7px;
+  }
+  
+  .content{
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 15px;
+      justify-content: space-evenly;
+  }
+  
+  .box{
+      height: 300px;
+      width: 27rem;
+      margin-top: 10px;
+      background-color: white;
+  }
+  
+  .box6-img, .box7-img, .box8-img, .box9-img, .box10-img, .box11-img, .box12-img, .box13-img, .box14-img{
+      border: 1px solid gray;
+      height: 230px;
+      width: 90%;
+      padding: 15px;
+      background-size: contain;
+      background-repeat: no-repeat;
+  }
+  
+  .box-content{
+      margin: 30px;
+  }        
+  
+  footer{
+    margin-top: 15px;
+  }
+  
+  .foot-panel1{
+    background-color: #374759;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+  
+  .foot-panel2{
+    background-color: #222f3d;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  ul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  ul a{
+    display: flex;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+    text-decoration: none;
+  }
+  
+  ul a:hover{
+    border-bottom: 1px solid white;
+  }
+  
+  .foot-panel3{
+    background-color: #222f3d;
+    color: white;
+    border-top: 0.5px solid white;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .sec_logo{
+    background-image: url('static/images/flipkart.jpg');
+    background-size: cover;
+    height: 50px;
+    width: 100px;
+  }
+  
+  .foot-panel4{
+    background-color: #0f1111;
+    color: white;
+    height: 80px;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  
+  .pages{
+    padding-top: 25px;
+  }
+  
+  .pages a{
+    color: #dddddd;
+    text-decoration: none;
+  }
+  
+  .copyright{
+    padding-top: 5px;
+  }
+  
+</style>
+  <!-- -----------------------------------------2nd bar-------------------------------- -->
+  <div class="sec-navbar">
+      <div class="box1">
+           <h2 class="text">Grocery</h2>
+      </div>
+      <div class="box2">
+          <h2 class="text">Mobiles</h2>
+      </div>
+      <div class="box3">
+          <h2 class="text">fashion</h2>
+      </div>
+      <div class="box4">
+          <h2 class="text">furniture</h2>
+      </div>
+      <div class="box5">
+          <h2 class="text">Electronics</h2>
+      </div>
+
+  </div>
+  <!-- -----------------------------------------3rd bar-------------------------------- -->
+  <div class="container my-4 flex">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://source.unsplash.com/random/1000x1000?furniture,sig=1" height="300px" width="200px" class="d-block w-100" alt="image">
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/random/1000x1000?fashion,sig=2" height="300px" width="200px" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/random/1000x1000?technology,sig=3" height="300px" width="200px" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>  
+
+  <!-- -----------------------------------------4th bar-------------------------------- -->
+   <div class="content">
+      <div class="box6 box">
+          <div class="box-content">
+              <h3>Electronics</h3>
+              <div class="box6-img">
+              <img src="https://source.unsplash.com/random/1000x1000?electronics,sig=1" height="200px" width="200px" class="d-block w-100" alt="image">
+              </div>
+          </div>
+      </div>
+      <div class="box7 box">
+          <div class="box-content">
+              <h3>Furniture</h3>
+              <div class="box7-img">
+                  <img src="https://source.unsplash.com/random/1000x1000?furniture,sig=1" height="200px" width="200px" class="d-block w-100" alt="image">
+              </div>
+          </div>
+      </div>
+      <div class="box8 box">
+          <div class="box-content">
+              <h3>Grocery</h3>
+              <div class="box8-img">
+                  <img src="https://source.unsplash.com/random/1000x1000?grocery,sig=1" height="200px" width="200px" class="d-block w-100" alt="image">
+              </div>
+          </div>
+      </div>
+      <div class="box9 box">
+          <div class="box-content">
+              <h3>Moblies</h3>
+              <div class="box9-img">
+                  <img src="https://source.unsplash.com/random/1000x1000?Moblies,sig=1" height="200px" width="200px" class="d-block w-100" alt="image">
+              </div>
+          </div>
+      </div>
+      <div class="box10 box">
+          <div class="box-content">
+              <h3>Dress</h3>
+              <div class="box10-img">
+                  <img src="https://source.unsplash.com/random/1000x1000?dresses,sig=1" height="200px" width="200px" class="d-block w-100" alt="image">
+              </div>
+          </div>
+      </div>
+      <div class="box11 box">
+          <div class="box-content">
+              <h3>Books</h3>
+              <div class="box11-img">
+              <img src="https://source.unsplash.com/random/1000x1000?books,sig=1" height="200px" width="200px" class="d-block w-100" alt="image">
+              </div>
+          </div>
+      </div>
+      <div class="box12 box">
+          <div class="box-content">
+              <h3>Laptop</h3>
+              <div class="box12-img">
+                  <img src="https://source.unsplash.com/random/1000x1000?laptop,sig=1" height="200px" width="200px" class="d-block w-100" alt="image">
+              </div>
+          </div>
+      </div>
+      <div class="box13 box">
+          <div class="box-content">
+              <h3>Shoes</h3>
+              <div class="box13-img">
+                  <img src="https://source.unsplash.com/random/1000x1000?shoes,sig=1" height="200px" width="200px" class="d-block w-100" alt="image">
+              </div>
+          </div>
+      </div>
+      <div class="box14 box">
+          <div class="box-content">
+              <h3>Sports</h3>
+              <div class="box14-img">
+                  <img src="https://source.unsplash.com/random/1000x1000?sports,sig=1" height="200px" width="200px" class="d-block w-100" alt="image">
+              </div>
+          </div>
+      </div>
+  </div>
+<!-- ---------------------------------------------------footer---------------------------------  -->
+
+    <footer>
+        <div class="foot-panel1">Back to top</div>
+ 
+        <div class="foot-panel2">
+         <ul>
+             <p>Get to Know Us</p>
+             <a href="#">About us</a>
+             <a href="#">Careers</a>
+             <a href="#">Press Releases</a>
+             <a href="#">Press ReleasesFlipkart Science</a>
+         </ul>
+ 
+         <ul>
+             <p>Connect with Us</p>
+             <a href="#">Facebook</a>
+             <a href="#">Twitter</a>
+             <a href="#">Instagram</a>
+         </ul>
+ 
+         <ul>
+             <p>Make Money with Us</p>
+             <a href="#">Sell on Flipkart</a>
+             <a href="#">Sell under Flipkart Accelerator</a>
+             <a href="#">Protect and Build Your Brand</a>
+             <a href="#">Flipkart Global Selling</a>
+             <a href="#">Become an Affiliate</a>
+             <a href="#">Fulfilment by Flipkart</a>
+             <a href="#">Advertise Your Products</a>
+         </ul>
+ 
+         <ul>
+             <p>Let Us Help You</p>
+             <a href="#">COVID-19 and Flipkart</a>
+             <a href="#">Your Account</a>
+             <a href="#">Returns Centre</a>
+             <a href="#">100% Purchase Protection</a>
+             <a href="#">Flipkart App Download</a>
+             <a href="#">Help</a>
+         </ul>
+        </div>
+ 
+        <div class="foot-panel3">
+         <div class="sec_logo"></div>
+        </div>
+ 
+        <div class="foot-panel4">
+         <div class="pages">
+             <a href="#">Condition of Use | </a>
+             <a href="#">Privacy Notice | </a>
+             <a href="#">Your Ads Privacy Choicies</a>
+         </div>
+ 
+         <div class="copyright">
+             © 2007-2024, Flipkart.com, Inc. or its affiliates
+         </div>
+ 
+        </div>
+  </footer>
+{% endblock body %}
